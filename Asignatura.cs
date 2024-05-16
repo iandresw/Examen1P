@@ -29,16 +29,16 @@ namespace Examen1P
         public void Imprimir()
         {
             Console.WriteLine("*******************************");
-            Console.WriteLine("/n");
+            Console.WriteLine("\n");
             Console.WriteLine($"Nombre del Estudiante: {NombreAlumno}");
             Console.WriteLine($"Numero de Cuenta: {NumeroCuenta}");
             Console.WriteLine($"Correo Electronico: {Email}");
             Console.WriteLine($"Nombre de la clase {NombreAsignatura}");
             Console.WriteLine($"Horario: {Horario}");
             Console.WriteLine($"Nombre del Docente: {NombreDocente}");
-            Console.WriteLine($"Nora Final: {CalcularNotaFinal()} - {MensajeNotaFinal(CalcularNotaFinal())}");
-            Console.WriteLine($"Nora Final: {CalcularNotaFinal(N1, N2, N3)} - {MensajeNotaFinal(CalcularNotaFinal(N1, N2, N3))}");
-            Console.WriteLine("/n");
+            Console.WriteLine($"Nota Final: {CalcularNotaFinal()} - {MensajeNotaFinal(CalcularNotaFinal())}");
+            Console.WriteLine($"Nota Final: {CalcularNotaFinal(N1, N2, N3)} - {MensajeNotaFinal(CalcularNotaFinal(N1, N2, N3))}");
+            Console.WriteLine("\n");
             Console.WriteLine("**********Este es el FIN!************************");
         }
 
@@ -46,15 +46,15 @@ namespace Examen1P
         {
             string estado ;
             estado = "";
-            if ((NotaFinal > 0) && (NotaFinal< 59)){
+            if ((NotaFinal >= 0) && (NotaFinal<= 59)){
                 estado = "Reprobado";
-            }else if ((NotaFinal > 60 ) && (NotaFinal<79))
+            }else if ((NotaFinal >= 60 ) && (NotaFinal<=79))
             {
                 estado = "Bueno";
-            }else if ((NotaFinal > 80) && (NotaFinal < 89))
+            }else if ((NotaFinal >= 80) && (NotaFinal <= 89))
             {
                 estado = "Muy Bueno";
-            }else if ((NotaFinal > 90) && (NotaFinal <= 100))
+            }else if ((NotaFinal >= 90) && (NotaFinal <= 100))
             {
                 estado = "Sobresaliente";
             }
