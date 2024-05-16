@@ -10,8 +10,10 @@ namespace Examen1P
     {
         public double CalcularNotaFinal();
 
-        public double CalcularNotaFinal(double n1, double n2, double n3);
+        public double CalcularNotaFinal(int n1, int n2, int n3);
 
         public string MensajeNotaFinal(double NotaFinal);
+
+        public void Imprimir();
     }
 }

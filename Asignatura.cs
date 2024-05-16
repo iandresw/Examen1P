@@ -9,26 +9,37 @@ namespace Examen1P
 {
     public class Asignatura : Alumno, IAsignatura
     {
-        public double N1;
-        public double N2;
-        public double N3;
-        public string NombreAsignatura{ get; set; }
+        public int N1;
+        public int N2;
+        public int N3;
+        public string NombreAsignatura { get; set; }
         public string Horario { get; set; }
         public string NombreDocente { get; set; }
 
         public double CalcularNotaFinal()
         {
-            throw new NotImplementedException();
+            return N1 + N2 + N3 ;
         }
 
-        public double CalcularNotaFinal(double n1, double n2, double n3)
+        public double CalcularNotaFinal(int n1, int n2, int n3)
         {
-            throw new NotImplementedException();
+            return n1 + n2 + n3;
         }
 
         public void Imprimir()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("*******************************");
+            Console.WriteLine("/n");
+            Console.WriteLine($"Nombre del Estudiante: {NombreAlumno}");
+            Console.WriteLine($"Numero de Cuenta: {NumeroCuenta}");
+            Console.WriteLine($"Correo Electronico: {Email}");
+            Console.WriteLine($"Nombre de la clase {NombreAsignatura}");
+            Console.WriteLine($"Horario: {Horario}");
+            Console.WriteLine($"Nombre del Docente: {NombreDocente}");
+            Console.WriteLine($"Nora Final: {CalcularNotaFinal()} - {MensajeNotaFinal(CalcularNotaFinal())}");
+            Console.WriteLine($"Nora Final: {CalcularNotaFinal(N1, N2, N3)} - {MensajeNotaFinal(CalcularNotaFinal(N1, N2, N3))}");
+            Console.WriteLine("/n");
+            Console.WriteLine("**********Este es el FIN!************************");
         }
 
         public string MensajeNotaFinal(double NotaFinal)
@@ -43,7 +54,7 @@ namespace Examen1P
             }else if ((NotaFinal > 80) && (NotaFinal < 89))
             {
                 estado = "Muy Bueno";
-            }else if ((NotaFinal > 90) && (NotaFinal < 100))
+            }else if ((NotaFinal > 90) && (NotaFinal <= 100))
             {
                 estado = "Sobresaliente";
             }
