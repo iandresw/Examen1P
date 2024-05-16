@@ -1,4 +1,6 @@
 ﻿using Examen1P;
+try
+{
 
     string? strNota1, strNota2, strNota3, strNombreA, srtCuenta, strEmail, strClase, strHorario, strDocente;
     Asignatura asignatura = new Asignatura();
@@ -42,20 +44,21 @@
     valNota2 = int.TryParse(strNota2, out asignatura.N2);
     valNota3 = int.TryParse(strNota3, out asignatura.N3);
 
-    
 
-    if( (asignatura.N1 > 30) || (asignatura.N2 > 30))
+
+    if ((asignatura.N1 > 30) || (asignatura.N2 > 30))
     {
         Console.WriteLine("La Nota del Primer o Segundo Parcial no es VALIDA! Sobrepasa el Limite");
         valRango = false;
-    }else if (asignatura.N3 > 40)
+    }
+    else if (asignatura.N3 > 40)
     {
         Console.WriteLine("La Nota del Tercer Parcial no es VALIDA! Sobrepasa el Limite");
         valRango = false;
-}
+    }
     else
     {
-    valRango = true;
+        valRango = true;
     }
 
 
@@ -74,8 +77,12 @@
     else if (!valNota3)
     {
         Console.WriteLine("La Nota del Primer Parcial no es VALIDA! Intente de Nuevo");
-}
-else
+    }
+    else
+    {
+        Console.WriteLine("No se pudo completar");
+    }
+}catch(Exception e)
 {
-    Console.WriteLine("No se pudo completar");
+    Console.WriteLine(e.ToString());
 }
